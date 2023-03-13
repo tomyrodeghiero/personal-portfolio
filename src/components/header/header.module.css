@@ -1,0 +1,102 @@
+.header {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--body-color);
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.show {
+  opacity: 1;
+}
+
+.intro {
+  max-width: 540px;
+  text-align: center;
+  z-index: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header__img__container {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  border-radius: 100%;
+  background-color: #e6eaf3;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.header__main__img {
+  z-index: 1;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .header__main__img {
+    height: 75vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__main__img {
+    height: 85vh;
+  }
+}
+
+.header__main__img__container {
+  display: flex;
+  align-items: flex-end;
+  padding: 0 7.5rem;
+}
+
+.header__img {
+  margin-bottom: 1.5rem;
+}
+
+.header__name {
+  font-size: 2.75rem;
+  font-weight: var(--font-bold);
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  font-size: 2.5rem;
+  font-family: sans-serif;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+.underlined {
+  /*   background: red; */
+  position: relative;
+}
+
+.underline_clip:after {
+  content: "";
+  position: absolute;
+  top: 95%;
+  width: 150%;
+  aspect-ratio: 3 / 1;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  border: 6px solid #0f56ec;
+  /* Use a clip-path to hide and show the bits you want */
+  clip-path: polygon(0 0, 50% 50%, 100% 0);
+}
+
+/* Text */
+.header__text {
+  font-size: 1.25rem;
+  display: flex;
+  margin-bottom: 5rem;
+}
+
+.header__text__primary {
+  margin-right: 4.5px;
+}

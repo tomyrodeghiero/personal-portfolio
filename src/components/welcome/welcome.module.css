@@ -1,0 +1,68 @@
+.fullContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f56ec;
+  margin: 0;
+  padding: 0;
+
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.welcomeTextAnimation {
+  font-weight: 700;
+  text-align: center;
+  font-size: 40px;
+  font-family: Rubik, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #0f56ec, #fff, #0f56ec);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 3.5s linear infinite;
+  position: relative;
+}
+
+.welcomeText {
+  font-weight: 700;
+  text-align: center;
+  font-size: 40px;
+  font-family: Rubik, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  animation-duration: 1s;
+  animation-name: animate-fade;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+  position: relative;
+  color: #fff;
+  text-shadow: 0 0 1em #0f56ec, 0 0 0.5em #0f56ec, 0 0 0.1em #0f56ec;
+}
+
+@keyframes animate-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
